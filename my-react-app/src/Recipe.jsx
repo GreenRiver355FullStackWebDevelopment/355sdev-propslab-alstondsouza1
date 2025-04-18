@@ -8,9 +8,12 @@ function Recipe({ recipe }) {
         {recipe.name}
       </Typography>
 
+      {/* Ingredients section title */}
       <Typography variant="h5" component="h3" gutterBottom>
         Ingredients
       </Typography>
+
+      {/* List of ingredients with checkboxes */}
       <ul style={{ paddingLeft: "1.5rem" }}>
         {recipe.ingredients.map((item, index) => (
           <li key={index}>
@@ -19,6 +22,7 @@ function Recipe({ recipe }) {
         ))}
       </ul>
 
+      {/* Instructions section title */}
       <Typography variant="h5" component="h3" gutterBottom>
         Instructions
       </Typography>
@@ -29,7 +33,7 @@ function Recipe({ recipe }) {
           </li>
         ))}
       </ol>
-      
+
       {/* Optional Glaze Section */}
       {recipe.optionalGlaze && (
         <div className="optional-Glaze" style={{ marginTop: "1.5rem" }}>
